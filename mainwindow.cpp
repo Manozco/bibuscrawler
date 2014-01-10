@@ -24,7 +24,7 @@ MainWindow::~MainWindow()
 void MainWindow::replyFinished(QNetworkReply *reply)
 {
     qDebug() << "replyFinished();";//debugtool:
-//    qDebug() << "Reply:" << reply->readAll();//debugtool:
+    qDebug() << "Reply:" << reply->readAll();//debugtool:
     QString html = reply->readAll();
     ui->webView->setHtml(html);
 }
